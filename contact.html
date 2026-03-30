@@ -18,8 +18,17 @@
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Mi Blog</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContact">
-                <span class="navbar-toggler-icon"></span>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavContact"
+                aria-controls="navbarNavContact"
+                aria-expanded="false"
+                aria-label="Abrir menú de navegación"
+            >
+                <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Abrir menú de navegación</span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNavContact">
@@ -31,7 +40,7 @@
                         <a class="nav-link" href="about.html">Acerca de mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contacto</a>
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -47,34 +56,34 @@
                     <h1 class="mb-4 text-center">Contacto</h1>
 
                     <form class="p-4 shadow rounded bg-light">
-
                         <!-- Nombre -->
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre *</label>
-                            <input type="text" class="form-control" id="nombre" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
                         </div>
 
                         <!-- Email -->
                         <div class="mb-3">
                             <label for="email" class="form-label">Email *</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
 
                         <!-- Teléfono -->
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="telefono">
+                            <input type="tel" class="form-control" id="telefono" name="telefono">
                         </div>
 
                         <!-- Mensaje -->
                         <div class="mb-3">
                             <label for="mensaje" class="form-label">Mensaje *</label>
-                            <textarea class="form-control" id="mensaje" rows="5" minlength="10" required></textarea>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" minlength="10" required></textarea>
                         </div>
 
                         <!-- Botón -->
-                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
-
+                        <button type="submit" class="btn btn-primary w-100" aria-label="Enviar formulario de contacto">
+                            Enviar
+                        </button>
                     </form>
 
                 </div>
@@ -85,7 +94,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
-            <p>© 2026 Mi Blog.</p>
+            <p>&copy; 2026 Mi Blog.</p>
         </div>
     </footer>
 
