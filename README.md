@@ -131,6 +131,6 @@ Tu `assets/styles.css` se importa DESPUÉS de Bootstrap, así que tus estilos lo
 
 ---
 
-**Autor**: [Tu nombre]  
+**Autor**: Gaston Jorge Leandro Mendiola
 **Fecha**: 2026-03-13  
 **Estado**: En desarrollo

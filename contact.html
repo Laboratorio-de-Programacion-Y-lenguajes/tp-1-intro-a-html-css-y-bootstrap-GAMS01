@@ -4,61 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Mi Blog</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <!-- Navbar -->
+
+    <!-- Navbar estilo profesor pero mejorada -->
     <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Mi Blog</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContact">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavContact">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Acerca de mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Formulario de contacto -->
+    <!-- Formulario -->
     <main class="py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <h1 class="mb-4">Contacto</h1>
 
-                    <form id="contactForm" novalidate>
-                        <!-- Campo nombre (COMPLETAR: validación) -->
+                    <h1 class="mb-4 text-center">Contacto</h1>
+
+                    <form class="p-4 shadow rounded bg-light">
+
+                        <!-- Nombre -->
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nombre *</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                            <div class="invalid-feedback">
-                                Por favor ingresa tu nombre.
-                            </div>
+                            <label for="nombre" class="form-label">Nombre *</label>
+                            <input type="text" class="form-control" id="nombre" required>
                         </div>
 
-                        <!-- Campo email (COMPLETAR) -->
+                        <!-- Email -->
                         <div class="mb-3">
                             <label for="email" class="form-label">Email *</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                            <div class="invalid-feedback">
-                                Por favor ingresa un email válido.
-                            </div>
+                            <input type="email" class="form-control" id="email" required>
                         </div>
 
-                        <!-- Campo teléfono (COMPLETAR: opcional) -->
+                        <!-- Teléfono -->
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="phone" name="phone">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono">
                         </div>
 
-                        <!-- Campo mensaje (COMPLETAR: minlength) -->
+                        <!-- Mensaje -->
                         <div class="mb-3">
-                            <label for="message" class="form-label">Mensaje *</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required minlength="10"></textarea>
-                            <div class="invalid-feedback">
-                                El mensaje debe tener al menos 10 caracteres.
-                            </div>
+                            <label for="mensaje" class="form-label">Mensaje *</label>
+                            <textarea class="form-control" id="mensaje" rows="5" minlength="10" required></textarea>
                         </div>
 
-                        <!-- Botón submit -->
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Enviar</button>
+                        <!-- Botón -->
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+
                     </form>
+
                 </div>
             </div>
         </div>
@@ -67,22 +85,12 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
-            <p>&copy; 2026 Mi Blog.</p>
+            <p>© 2026 Mi Blog.</p>
         </div>
     </footer>
 
-    <!-- Script: validación HTML5 + feedback visual -->
-    <script>
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', (e) => {
-            if (!form.checkValidity()) {
-                e.preventDefault();
-                e.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        });
-    </script>
+    <!-- Bootstrap JS (necesario para navbar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
